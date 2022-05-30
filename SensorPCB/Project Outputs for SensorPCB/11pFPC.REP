@@ -1,0 +1,47 @@
+*************************************************************
+FileName = 11pFPC.GBR
+AutoAperture = True
+*************************************************************
+Generating : Top Layer
+      File : 11pFPC.GTL
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D13
+    D14
+    D15
+    D16
+*************************************************************
+
+*************************************************************
+Generating : Board Layer Stack Top Coverlay
+      File : 11pFPC.GTS
+
+    Adding Layer      : Board Layer Stack Top Coverlay
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 1
+      File : 11pFPC.GM1
+
+    Adding Layer      : Mechanical 1
+
+
+Used DCodes :
+    D17
+*************************************************************
+

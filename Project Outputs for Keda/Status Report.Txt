@@ -1,0 +1,17 @@
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of Project [Keda.PrjPcb]
+   Generated File[FPC.GTO]
+   Generated File[FPC.GTP]
+   Generated File[FPC.GTS]
+   Generated File[FPC.GTL]
+   Generated File[FPC.GM1]
+   Generated File[FPC.RUL]
+   Generated File[FPC.EXTREP]
+   Generated File[FPC.REP]
+
+
+Files Generated   : 8
+Documents Printed : 0
+
+Finished Output Generation At 22:35:05 On 30/05/2022

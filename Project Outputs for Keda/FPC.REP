@@ -1,0 +1,76 @@
+*************************************************************
+FileName = FPC.GBR
+AutoAperture = True
+*************************************************************
+Generating : Mechanical 1
+      File : FPC.GM1
+
+    Adding Layer      : Mechanical 1
+
+
+Used DCodes :
+    D20
+*************************************************************
+
+*************************************************************
+Generating : Top Paste
+      File : FPC.GTP
+
+    Adding Layer      : Top Paste
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D14
+    D15
+*************************************************************
+
+*************************************************************
+Generating : Top Layer
+      File : FPC.GTL
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D14
+    D15
+    D19
+*************************************************************
+
+*************************************************************
+Generating : Board Layer Stack Top Coverlay
+      File : FPC.GTS
+
+    Adding Layer      : Board Layer Stack Top Coverlay
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D16
+    D17
+    D18
+*************************************************************
+
+*************************************************************
+Generating : Top Overlay
+      File : FPC.GTO
+
+    Adding Layer      : Top Overlay
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+*************************************************************
+

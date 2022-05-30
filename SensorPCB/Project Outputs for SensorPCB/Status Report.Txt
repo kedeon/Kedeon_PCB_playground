@@ -1,12 +1,14 @@
-Output: NC Drill Files
-Type  : NC Drill
-From  : Project [SensorPCB.PrjPcb]
-   Generated File[SensorPCB.TXT]
-   Generated File[SensorPCB.LDP]
-   Generated File[SensorPCB.DRR]
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of Project [SensorPCB.PrjPcb]
+   Generated File[11pFPC.GTS]
+   Generated File[11pFPC.GTL]
+   Generated File[11pFPC.GM1]
+   Generated File[11pFPC.EXTREP]
+   Generated File[11pFPC.REP]
 
 
-Files Generated   : 3
+Files Generated   : 5
 Documents Printed : 0
 
-Finished Output Generation At 20:00:11 On 29/05/2022
+Finished Output Generation At 22:27:38 On 30/05/2022
