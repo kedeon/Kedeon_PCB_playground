@@ -33,7 +33,7 @@ FSMCodingStyle=eFMSDropDownList_OneProcess
 FSMEncodingStyle=eFMSDropDownList_OneHot
 IsProjectConflictPreventionWarningsEnabled=0
 IsVirtualBomDocumentRemoved=0
-OutputPath=Project Outputs for SensorPCB
+OutputPath=
 LogFolderPath=
 ManagedProjectGUID=
 IncludeDesignInRelease=0
@@ -117,255 +117,47 @@ GenerateClassCluster=0
 DocumentUniqueId=
 
 [GeneratedDocument1]
-DocumentPath=Project Outputs for SensorPCB\11pFPC.cvg
-DItemRevisionGUID=
-
-[GeneratedDocument2]
 DocumentPath=Project Outputs for SensorPCB\11pFPC.EXTREP
 DItemRevisionGUID=
 
-[GeneratedDocument3]
-DocumentPath=Project Outputs for SensorPCB\11pFPC.GBL
-DItemRevisionGUID=
-
-[GeneratedDocument4]
-DocumentPath=Project Outputs for SensorPCB\11pFPC.GBO
-DItemRevisionGUID=
-
-[GeneratedDocument5]
-DocumentPath=Project Outputs for SensorPCB\11pFPC.GBP
-DItemRevisionGUID=
-
-[GeneratedDocument6]
-DocumentPath=Project Outputs for SensorPCB\11pFPC.GBS
-DItemRevisionGUID=
-
-[GeneratedDocument7]
-DocumentPath=Project Outputs for SensorPCB\11pFPC.GCB2
-DItemRevisionGUID=
-
-[GeneratedDocument8]
-DocumentPath=Project Outputs for SensorPCB\11pFPC.GCB4
-DItemRevisionGUID=
-
-[GeneratedDocument9]
-DocumentPath=Project Outputs for SensorPCB\11pFPC.GCT2
-DItemRevisionGUID=
-
-[GeneratedDocument10]
-DocumentPath=Project Outputs for SensorPCB\11pFPC.GCT4
-DItemRevisionGUID=
-
-[GeneratedDocument11]
-DocumentPath=Project Outputs for SensorPCB\11pFPC.GM1
-DItemRevisionGUID=
-
-[GeneratedDocument12]
-DocumentPath=Project Outputs for SensorPCB\11pFPC.GM6
-DItemRevisionGUID=
-
-[GeneratedDocument13]
-DocumentPath=Project Outputs for SensorPCB\11pFPC.GPT
-DItemRevisionGUID=
-
-[GeneratedDocument14]
-DocumentPath=Project Outputs for SensorPCB\11pFPC.GTL
-DItemRevisionGUID=
-
-[GeneratedDocument15]
-DocumentPath=Project Outputs for SensorPCB\11pFPC.GTO
-DItemRevisionGUID=
-
-[GeneratedDocument16]
-DocumentPath=Project Outputs for SensorPCB\11pFPC.GTP
-DItemRevisionGUID=
-
-[GeneratedDocument17]
-DocumentPath=Project Outputs for SensorPCB\11pFPC.GTS
-DItemRevisionGUID=
-
-[GeneratedDocument18]
+[GeneratedDocument2]
 DocumentPath=Project Outputs for SensorPCB\11pFPC.REP
 DItemRevisionGUID=
 
-[GeneratedDocument19]
-DocumentPath=Project Outputs for SensorPCB\11pFPC.RUL
-DItemRevisionGUID=
-
-[GeneratedDocument20]
-DocumentPath=Project Outputs for SensorPCB\11pFPC_Copper_Signal_Top.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument21]
-DocumentPath=Project Outputs for SensorPCB\11pFPC_Coverlay_Bot_2.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument22]
-DocumentPath=Project Outputs for SensorPCB\11pFPC_Coverlay_Bot_4.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument23]
-DocumentPath=Project Outputs for SensorPCB\11pFPC_Coverlay_Top_2.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument24]
-DocumentPath=Project Outputs for SensorPCB\11pFPC_Coverlay_Top_4.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument25]
-DocumentPath=Project Outputs for SensorPCB\11pFPC_Mechanical_1.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument26]
-DocumentPath=Project Outputs for SensorPCB\11pFPC_Profile.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument27]
-DocumentPath=Project Outputs for SensorPCB\11pFPC_Soldermask_Top.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument28]
-DocumentPath=Project Outputs for SensorPCB\odb\steps\pcb\layers\comp_+_top\components
-DItemRevisionGUID=
-
-[GeneratedDocument29]
-DocumentPath=Project Outputs for SensorPCB\odb\steps\pcb\eda\data
-DItemRevisionGUID=
-
-[GeneratedDocument30]
-DocumentPath=Project Outputs for SensorPCB\Design Rule Check - 11pFPC.html
-DItemRevisionGUID=
-
-[GeneratedDocument31]
-DocumentPath=Project Outputs for SensorPCB\odb\steps\pcb\layers\adhesive_1\features
-DItemRevisionGUID=
-
-[GeneratedDocument32]
-DocumentPath=Project Outputs for SensorPCB\odb\steps\pcb\layers\adhesive_2\features
-DItemRevisionGUID=
-
-[GeneratedDocument33]
-DocumentPath=Project Outputs for SensorPCB\odb\steps\pcb\layers\adhesive_3\features
-DItemRevisionGUID=
-
-[GeneratedDocument34]
-DocumentPath=Project Outputs for SensorPCB\odb\steps\pcb\layers\adhesive_4\features
-DItemRevisionGUID=
-
-[GeneratedDocument35]
-DocumentPath=Project Outputs for SensorPCB\odb\steps\pcb\layers\board_layer_stack_bottom_coverlay\features
-DItemRevisionGUID=
-
-[GeneratedDocument36]
-DocumentPath=Project Outputs for SensorPCB\odb\steps\pcb\layers\board_layer_stack_top_coverlay\features
-DItemRevisionGUID=
-
-[GeneratedDocument37]
-DocumentPath=Project Outputs for SensorPCB\odb\steps\pcb\layers\bottom_layer\features
-DItemRevisionGUID=
-
-[GeneratedDocument38]
-DocumentPath=Project Outputs for SensorPCB\odb\steps\pcb\layers\bottom_paste\features
-DItemRevisionGUID=
-
-[GeneratedDocument39]
-DocumentPath=Project Outputs for SensorPCB\odb\steps\pcb\layers\comp_+_top\features
-DItemRevisionGUID=
-
-[GeneratedDocument40]
-DocumentPath=Project Outputs for SensorPCB\odb\steps\pcb\layers\dielectric_1\features
-DItemRevisionGUID=
-
-[GeneratedDocument41]
-DocumentPath=Project Outputs for SensorPCB\odb\steps\pcb\layers\stiffener_1\features
-DItemRevisionGUID=
-
-[GeneratedDocument42]
-DocumentPath=Project Outputs for SensorPCB\odb\steps\pcb\layers\stiffener_2\features
-DItemRevisionGUID=
-
-[GeneratedDocument43]
-DocumentPath=Project Outputs for SensorPCB\odb\steps\pcb\layers\top_layer\features
-DItemRevisionGUID=
-
-[GeneratedDocument44]
-DocumentPath=Project Outputs for SensorPCB\odb\steps\pcb\layers\top_paste\features
-DItemRevisionGUID=
-
-[GeneratedDocument45]
-DocumentPath=Project Outputs for SensorPCB\odb\matrix\matrix
-DItemRevisionGUID=
-
-[GeneratedDocument46]
-DocumentPath=Project Outputs for SensorPCB\odb\steps\pcb\netlists\cadnet\netlist
-DItemRevisionGUID=
-
-[GeneratedDocument47]
-DocumentPath=Project Outputs for SensorPCB\odb\steps\pcb\profile
-DItemRevisionGUID=
-
-[GeneratedDocument48]
-DocumentPath=Project Outputs for SensorPCB\SensorPCB.DRR
-DItemRevisionGUID=
-
-[GeneratedDocument49]
+[GeneratedDocument3]
 DocumentPath=Project Outputs for SensorPCB\SensorPCB.EXTREP
 DItemRevisionGUID=
 
-[GeneratedDocument50]
+[GeneratedDocument4]
 DocumentPath=Project Outputs for SensorPCB\SensorPCB.GBL
 DItemRevisionGUID=
 
-[GeneratedDocument51]
+[GeneratedDocument5]
 DocumentPath=Project Outputs for SensorPCB\SensorPCB.GBO
 DItemRevisionGUID=
 
-[GeneratedDocument52]
-DocumentPath=Project Outputs for SensorPCB\SensorPCB.GBP
-DItemRevisionGUID=
-
-[GeneratedDocument53]
+[GeneratedDocument6]
 DocumentPath=Project Outputs for SensorPCB\SensorPCB.GBS
 DItemRevisionGUID=
 
-[GeneratedDocument54]
-DocumentPath=Project Outputs for SensorPCB\SensorPCB.GM1
-DItemRevisionGUID=
-
-[GeneratedDocument55]
+[GeneratedDocument7]
 DocumentPath=Project Outputs for SensorPCB\SensorPCB.GTL
 DItemRevisionGUID=
 
-[GeneratedDocument56]
+[GeneratedDocument8]
 DocumentPath=Project Outputs for SensorPCB\SensorPCB.GTO
 DItemRevisionGUID=
 
-[GeneratedDocument57]
-DocumentPath=Project Outputs for SensorPCB\SensorPCB.GTP
-DItemRevisionGUID=
-
-[GeneratedDocument58]
+[GeneratedDocument9]
 DocumentPath=Project Outputs for SensorPCB\SensorPCB.GTS
 DItemRevisionGUID=
 
-[GeneratedDocument59]
+[GeneratedDocument10]
 DocumentPath=Project Outputs for SensorPCB\SensorPCB.LDP
 DItemRevisionGUID=
 
-[GeneratedDocument60]
-DocumentPath=Project Outputs for SensorPCB\SensorPCB.REP
-DItemRevisionGUID=
-
-[GeneratedDocument61]
-DocumentPath=Project Outputs for SensorPCB\SensorPCB.RUL
-DItemRevisionGUID=
-
-[GeneratedDocument62]
+[GeneratedDocument11]
 DocumentPath=Project Outputs for SensorPCB\SensorPCB.TXT
-DItemRevisionGUID=
-
-[GeneratedDocument63]
-DocumentPath=Project Outputs for SensorPCB\odb\steps\pcb\stephdr
 DItemRevisionGUID=
 
 [Configuration1]
@@ -415,7 +207,7 @@ SCH_HasExpandLogicalToPhysicalSheets=0
 SaveSettingsToOutJob=-1
 
 [Generic_EDE]
-OutputDir=Project Outputs for SensorPCB
+OutputDir=
 
 [OutputGroup1]
 Name=Netlist Outputs

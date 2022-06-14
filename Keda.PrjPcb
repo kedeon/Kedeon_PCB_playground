@@ -33,7 +33,7 @@ FSMCodingStyle=eFMSDropDownList_OneProcess
 FSMEncodingStyle=eFMSDropDownList_OneHot
 IsProjectConflictPreventionWarningsEnabled=0
 IsVirtualBomDocumentRemoved=0
-OutputPath=Project Outputs for Keda
+OutputPath=
 LogFolderPath=
 ManagedProjectGUID=
 IncludeDesignInRelease=0
@@ -176,30 +176,10 @@ DocumentPath=Project Outputs for Keda\FPC.EXTREP
 DItemRevisionGUID=
 
 [GeneratedDocument3]
-DocumentPath=Project Outputs for Keda\FPC.GM1
-DItemRevisionGUID=
-
-[GeneratedDocument4]
-DocumentPath=Project Outputs for Keda\FPC.GTL
-DItemRevisionGUID=
-
-[GeneratedDocument5]
-DocumentPath=Project Outputs for Keda\FPC.GTO
-DItemRevisionGUID=
-
-[GeneratedDocument6]
-DocumentPath=Project Outputs for Keda\FPC.GTP
-DItemRevisionGUID=
-
-[GeneratedDocument7]
-DocumentPath=Project Outputs for Keda\FPC.GTS
-DItemRevisionGUID=
-
-[GeneratedDocument8]
 DocumentPath=Project Outputs for Keda\FPC.REP
 DItemRevisionGUID=
 
-[GeneratedDocument9]
+[GeneratedDocument4]
 DocumentPath=Project Outputs for Keda\FPC.RUL
 DItemRevisionGUID=
 
@@ -250,7 +230,7 @@ SCH_HasExpandLogicalToPhysicalSheets=0
 SaveSettingsToOutJob=0
 
 [Generic_EDE]
-OutputDir=Project Outputs for Keda
+OutputDir=
 
 [OutputGroup1]
 Name=Netlist Outputs
