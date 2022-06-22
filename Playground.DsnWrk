@@ -4,3 +4,5 @@ Version=1.0
 ProjectPath=Keda.PrjPcb
 [Project2]
 ProjectPath=SensorPCB\SensorPCB.PrjPcb
+[Project3]
+ProjectPath=KedaTest\KedaTest.PrjPcb
