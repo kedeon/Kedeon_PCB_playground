@@ -1,0 +1,112 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\KedaTest\PCB1.PcbDoc
+Date     : 17/07/2022
+Time     : 18:31:54
+
+WARNING: Unplated multi-layer pad(s) detected
+   Pad Free-P15(124mm,47mm) on Multi-Layer on Net GND
+   Pad Free-P12(3mm,47mm) on Multi-Layer on Net GND
+
+Processing Rule : Clearance Constraint (Gap=0.15mm) (WithinRoom('UsbClearance','UsbClearance_1')),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.114mm) (InDifferentialPairClass('usbDif')),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.254mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.254mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.254mm) (Max=0.254mm) (Preferred=0.254mm) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.127mm) (Max=1mm) (Preferred=0.15mm) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.1mm) (Max=0.254mm) (Preferred=0.254mm) (WithinRoom('KB'))
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.25mm) (Conductor Width=0.25mm) (Air Gap=0.15mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.025mm) (Max=4mm) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=0.254mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=0mm) (IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=0.1mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mm) (All)
+Rule Violations :0
+
+Processing Rule : Room UsbClearance (Bounding Region = (41.9mm, 65.4mm, 48.9mm, 67.4mm) (False)
+Rule Violations :0
+
+Processing Rule : Room UsbClearance_1 (Bounding Region = (128.9mm, 65.619mm, 135.765mm, 67.4mm) (False)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+Waived Violations Of Rule : Un-Routed Net Constraint ( (All) )
+   Waived Violation between Un-Routed Net Constraint: Arc (117.343mm,46.896mm) on Bottom Layer Dead Copper - Net Not Assigned.Waived by KB at 17/07/2022 17:21:21KB
+   Waived Violation between Un-Routed Net Constraint: Arc (117.343mm,46.896mm) on Bottom Layer Dead Copper - Net Not Assigned.Waived by KB at 17/07/2022 17:21:21KB
+   Waived Violation between Un-Routed Net Constraint: Arc (117.343mm,46.896mm) on Top Layer Dead Copper - Net Not Assigned.Waived by KB at 17/07/2022 17:21:21KB
+   Waived Violation between Un-Routed Net Constraint: Arc (117.343mm,46.896mm) on Top Layer Dead Copper - Net Not Assigned.Waived by KB at 17/07/2022 17:21:21KB
+   Waived Violation between Un-Routed Net Constraint: Arc (117.943mm,46.896mm) on Bottom Layer Dead Copper - Net Not Assigned.Waived by KB at 17/07/2022 17:21:21KB
+   Waived Violation between Un-Routed Net Constraint: Arc (117.943mm,46.896mm) on Bottom Layer Dead Copper - Net Not Assigned.Waived by KB at 17/07/2022 17:21:21KB
+   Waived Violation between Un-Routed Net Constraint: Arc (117.943mm,46.896mm) on Top Layer Dead Copper - Net Not Assigned.Waived by KB at 17/07/2022 17:21:21KB
+   Waived Violation between Un-Routed Net Constraint: Arc (117.943mm,46.896mm) on Top Layer Dead Copper - Net Not Assigned.Waived by KB at 17/07/2022 17:21:21KB
+   Waived Violation between Un-Routed Net Constraint: Track (116.743mm,46.296mm)(116.743mm,47.496mm) on Bottom Layer Dead Copper - Net Not Assigned.Waived by KB at 17/07/2022 17:21:21KB
+   Waived Violation between Un-Routed Net Constraint: Track (116.743mm,46.296mm)(116.743mm,47.496mm) on Top Layer Dead Copper - Net Not Assigned.Waived by KB at 17/07/2022 17:21:21KB
+   Waived Violation between Un-Routed Net Constraint: Track (116.743mm,46.296mm)(118.543mm,46.296mm) on Bottom Layer Dead Copper - Net Not Assigned.Waived by KB at 17/07/2022 17:21:21KB
+   Waived Violation between Un-Routed Net Constraint: Track (116.743mm,46.296mm)(118.543mm,46.296mm) on Top Layer Dead Copper - Net Not Assigned.Waived by KB at 17/07/2022 17:21:21KB
+   Waived Violation between Un-Routed Net Constraint: Track (116.743mm,47.496mm)(118.543mm,47.496mm) on Bottom Layer Dead Copper - Net Not Assigned.Waived by KB at 17/07/2022 17:21:21KB
+   Waived Violation between Un-Routed Net Constraint: Track (116.743mm,47.496mm)(118.543mm,47.496mm) on Top Layer Dead Copper - Net Not Assigned.Waived by KB at 17/07/2022 17:21:21KB
+   Waived Violation between Un-Routed Net Constraint: Track (117.043mm,46.896mm)(118.243mm,46.896mm) on Bottom Layer Dead Copper - Net Not Assigned.Waived by KB at 17/07/2022 17:21:21KB
+   Waived Violation between Un-Routed Net Constraint: Track (117.043mm,46.896mm)(118.243mm,46.896mm) on Top Layer Dead Copper - Net Not Assigned.Waived by KB at 17/07/2022 17:21:21KB
+   Waived Violation between Un-Routed Net Constraint: Track (117.043mm,47.196mm)(117.643mm,46.896mm) on Bottom Layer Dead Copper - Net Not Assigned.Waived by KB at 17/07/2022 17:21:21KB
+   Waived Violation between Un-Routed Net Constraint: Track (117.043mm,47.196mm)(117.643mm,46.896mm) on Top Layer Dead Copper - Net Not Assigned.Waived by KB at 17/07/2022 17:21:21KB
+   Waived Violation between Un-Routed Net Constraint: Track (117.643mm,46.896mm)(118.243mm,47.196mm) on Bottom Layer Dead Copper - Net Not Assigned.Waived by KB at 17/07/2022 17:21:21KB
+   Waived Violation between Un-Routed Net Constraint: Track (117.643mm,46.896mm)(118.243mm,47.196mm) on Top Layer Dead Copper - Net Not Assigned.Waived by KB at 17/07/2022 17:21:21KB
+   Waived Violation between Un-Routed Net Constraint: Track (118.543mm,46.296mm)(118.543mm,47.496mm) on Bottom Layer Dead Copper - Net Not Assigned.Waived by KB at 17/07/2022 17:21:21KB
+   Waived Violation between Un-Routed Net Constraint: Track (118.543mm,46.296mm)(118.543mm,47.496mm) on Top Layer Dead Copper - Net Not Assigned.Waived by KB at 17/07/2022 17:21:21KB
+Waived Violations :22
+
+Waived Violations Of Rule : Width Constraint (Min=0.127mm) (Max=1mm) (Preferred=0.15mm) (All)
+   Waived Violation between Width Constraint: Track (116.743mm,46.296mm)(116.743mm,47.496mm) on Bottom Layer Actual Width = 0.1mm, Target Width = 0.127mmWaived by KB at 17/07/2022 17:24:34KB
+   Waived Violation between Width Constraint: Track (116.743mm,46.296mm)(116.743mm,47.496mm) on Top Layer Actual Width = 0.1mm, Target Width = 0.127mmWaived by KB at 17/07/2022 17:24:34KB
+   Waived Violation between Width Constraint: Track (116.743mm,46.296mm)(118.543mm,46.296mm) on Bottom Layer Actual Width = 0.1mm, Target Width = 0.127mmWaived by KB at 17/07/2022 17:24:34KB
+   Waived Violation between Width Constraint: Track (116.743mm,46.296mm)(118.543mm,46.296mm) on Top Layer Actual Width = 0.1mm, Target Width = 0.127mmWaived by KB at 17/07/2022 17:24:34KB
+   Waived Violation between Width Constraint: Track (116.743mm,47.496mm)(118.543mm,47.496mm) on Bottom Layer Actual Width = 0.1mm, Target Width = 0.127mmWaived by KB at 17/07/2022 17:24:34KB
+   Waived Violation between Width Constraint: Track (116.743mm,47.496mm)(118.543mm,47.496mm) on Top Layer Actual Width = 0.1mm, Target Width = 0.127mmWaived by KB at 17/07/2022 17:24:34KB
+   Waived Violation between Width Constraint: Track (118.543mm,46.296mm)(118.543mm,47.496mm) on Bottom Layer Actual Width = 0.1mm, Target Width = 0.127mmWaived by KB at 17/07/2022 17:24:34KB
+   Waived Violation between Width Constraint: Track (118.543mm,46.296mm)(118.543mm,47.496mm) on Top Layer Actual Width = 0.1mm, Target Width = 0.127mmWaived by KB at 17/07/2022 17:24:34KB
+Waived Violations :8
+
+
+Violations Detected : 0
+Waived Violations : 30
+Time Elapsed        : 00:00:02

@@ -125,38 +125,42 @@ DocumentPath=Project Outputs for SensorPCB\11pFPC.REP
 DItemRevisionGUID=
 
 [GeneratedDocument3]
-DocumentPath=Project Outputs for SensorPCB\SensorPCB.EXTREP
+DocumentPath=Project Outputs for SensorPCB\Design Rule Check - SensorPCB.html
 DItemRevisionGUID=
 
 [GeneratedDocument4]
-DocumentPath=Project Outputs for SensorPCB\SensorPCB.GBL
+DocumentPath=Project Outputs for SensorPCB\SensorPCB.EXTREP
 DItemRevisionGUID=
 
 [GeneratedDocument5]
-DocumentPath=Project Outputs for SensorPCB\SensorPCB.GBO
+DocumentPath=Project Outputs for SensorPCB\SensorPCB.GBL
 DItemRevisionGUID=
 
 [GeneratedDocument6]
-DocumentPath=Project Outputs for SensorPCB\SensorPCB.GBS
+DocumentPath=Project Outputs for SensorPCB\SensorPCB.GBO
 DItemRevisionGUID=
 
 [GeneratedDocument7]
-DocumentPath=Project Outputs for SensorPCB\SensorPCB.GTL
+DocumentPath=Project Outputs for SensorPCB\SensorPCB.GBS
 DItemRevisionGUID=
 
 [GeneratedDocument8]
-DocumentPath=Project Outputs for SensorPCB\SensorPCB.GTO
+DocumentPath=Project Outputs for SensorPCB\SensorPCB.GTL
 DItemRevisionGUID=
 
 [GeneratedDocument9]
-DocumentPath=Project Outputs for SensorPCB\SensorPCB.GTS
+DocumentPath=Project Outputs for SensorPCB\SensorPCB.GTO
 DItemRevisionGUID=
 
 [GeneratedDocument10]
-DocumentPath=Project Outputs for SensorPCB\SensorPCB.LDP
+DocumentPath=Project Outputs for SensorPCB\SensorPCB.GTS
 DItemRevisionGUID=
 
 [GeneratedDocument11]
+DocumentPath=Project Outputs for SensorPCB\SensorPCB.LDP
+DItemRevisionGUID=
+
+[GeneratedDocument12]
 DocumentPath=Project Outputs for SensorPCB\SensorPCB.TXT
 DItemRevisionGUID=
 
@@ -1787,7 +1791,6 @@ Type116=2
 Type117=3
 Type118=3
 Type119=3
-MultiChannelAlternate=2
 AlternateItemFail=3
 Type122=2
 Type123=1

@@ -1,0 +1,469 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 9em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD22\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">17/07/2022</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">17:00:47</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc" class="file"><acronym title="C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc">C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">31</td></tr>
+</table>
+</td>
+</table><a name="ID1RY21Z40SQ5XEPP3QTTKYK3VUHRZ015NVTYABDLTUR2UAAXJAPQK"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDH2DRWBN5U2VFIF3FVCD50N00YI5JPCWLJH2JI0G113P42YS5ASNP">Clearance Constraint (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID1DWBWRATEHV1MX1XIL2VSN0DQO4A5RTBQFYNCXI1O4WMCBS3W1MO">Clearance Constraint (Gap=0.12mm) (WithinRoom('J1_clearance')),(IsPad or IsTrack)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDA3TY1RHLBATUCOS3ZSXZP0WCOFUULYQU1SBFQEDQ12ZJEVTZG3NI">Clearance Constraint (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">3</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDLIMHOVQTWAZHBSO5ZUSHATTW2LE21VWDSAFIBVP5LOKEWDGF14IM">Clearance Constraint (Gap=0.1mm) (WithinRoom('ignore_clearence')  or WithinRoom('ignore_clearence_1')),(isPad  or IsTrack)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDI4JN1WFRMI4JC1DZDCYSHSMHCFIPWXGURXRYLTNGXGKLJY1HHJ">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDVHP1YQM4EDMZGSEVC1Y3W0W3QEBP0SBV3MQW51EMKZPQFYHK4B1G">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">26</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDIUU3MQUJDOEYJIHP5FWGBZWP4HPWSMQL1ZC3DHD4MYABXCAKQAGH">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDKWBAFMLG44MUHAX15LNR04JK2EZ54LN4YSIHFZG4HBYIGJ1HBNPN">Width Constraint (Min=0.127mm) (Max=1mm) (Preferred=0.15mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDZELZ11JT51XAKL4NZ5MM3TYMYCDW2BDWZVWV5CI0ODIT2LFJIUUF">Width Constraint (Min=0.1mm) (Max=0.254mm) (Preferred=0.254mm) (WithinRoom('KB'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDLMCAUB3HVDUGNIRHURYJDOQWQC1VVCHLTRM2TFDQYVQPA00XGU1K">Width Constraint (Min=0.254mm) (Max=0.254mm) (Preferred=0.254mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDR2UYP3PHOFJVEAUHRLT3OIXXIJNTBQLOTQ2B2WBTZGKVCL4X3NLO">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID40BRNNKCXDJBC41UO2ING13T2MLD3GPMZFKM2ZJDYHV33ANOQ05O">Power Plane Connect Rule(Relief Connect )(Expansion=0.25mm) (Conductor Width=0.25mm) (Air Gap=0.15mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDWAZBML4GCLUWMB3LXHTHYWT1THSKZGD2C2VUEUKBXUM1Y4IGSIDN">Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDBENI2DNMST1UG5XRJL0QBQU0ZLAQXTT0YOTOELPRV13LMMYOP3KC">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">2</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDHYD0EDXTEVBKI2M1HJXWGRECZO5Z4L1SCXY1IUOC2E5J4A5ZS">Minimum Solder Mask Sliver (Gap=0mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDISMDA5H0HLGHHGCHQ1JO35VH0FMIAJZANK2DKOFBG3GJHZUYHLVD">Silk To Solder Mask (Clearance=0mm) (IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID35JRRBCR50S4FA4KVXZGB1FINLTHE52DJ3EAJ0N5VSJ20ES30ILH">Silk to Silk (Clearance=0.1mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID2BZ05CROA1TPITNDOKAAGRJLNCQPSW4QZQLV43KS5HDSHO1VZTOK">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDXLJOQ0FJNH2PNDCLFTRDPJQ14OP5413TN10QZZDY25DJPBUOK0QK">Room KB (Bounding Region = (25.02mm, 1.72mm, 27.18mm, 3.28mm) (False)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDVHOMQNQZAOGDC4RLSM2RST51YMGU3YWD5WPSKFWSGBW4V3D14FP">Room ignore_clearence (Bounding Region = (14.4mm, 9.075mm, 17.06mm, 12.225mm) (False)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDBKKBQZ4DLG15HSAZ4GG1SDRUFGZ0B5ZJLMTD5LZ3ZKEJVSUCAEG">Room J1_clearance (Bounding Region = (17.2mm, 12.4mm, 21.26mm, 13.5mm) (False)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDTBV31W3STFOQH0DQ3ZTICSPGKGU1NISZDHYPGPFK1AA4OXWA03AM">Room ignore_clearence_1 (Bounding Region = (9.825mm, 10.05mm, 12.485mm, 11.4mm) (False)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDWHXKVNJNMU2LEYLQOEYB5WXMOECX5F4H52PJ3DG1WMC5Y1KIO52J">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">31</td>
+</tr>
+</table><br><a name="IDA3TY1RHLBATUCOS3ZSXZP0WCOFUULYQU1SBFQEDQ12ZJEVTZG3NI"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Clearance Constraint (Gap=0.254mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=683.726mil|Location2.X=694.976mil|Location1.Y=488.097mil|Location2.Y=499.347mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=683.726mil|Location2.X=694.976mil|Location1.Y=488.097mil|Location2.Y=499.347mil|Absolute=True">Clearance Constraint: (0.183mm &lt; 0.254mm) Between Pad J1-P12(17.308mm,12.807mm) on Bottom Layer And Region (0 hole(s)) Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=596.159mil|Location2.X=614.455mil|Location1.Y=426.848mil|Location2.Y=438.098mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=596.159mil|Location2.X=614.455mil|Location1.Y=426.848mil|Location2.Y=438.098mil|Absolute=True">Clearance Constraint: (0.127mm &lt; 0.254mm) Between Region (0 hole(s)) Bottom Layer And Region (0 hole(s)) Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=438.668mil|Location2.X=449.918mil|Location1.Y=409.336mil|Location2.Y=420.586mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=438.668mil|Location2.X=449.918mil|Location1.Y=409.336mil|Location2.Y=420.586mil|Absolute=True">Clearance Constraint: (0.198mm &lt; 0.254mm) Between Region (0 hole(s)) Bottom Layer And Region (0 hole(s)) Bottom Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDVHP1YQM4EDMZGSEVC1Y3W0W3QEBP0SBV3MQW51EMKZPQFYHK4B1G"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=39.37mil|Location2.X=118.504mil|Location1.Y=405.512mil|Location2.Y=484.646mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=39.37mil|Location2.X=118.504mil|Location1.Y=405.512mil|Location2.Y=484.646mil|Absolute=True">Un-Routed Net Constraint: Arc (2.005mm,11.305mm) on Multi-Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1012.795mil|Location2.X=1030.512mil|Location1.Y=83.661mil|Location2.Y=101.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1012.795mil|Location2.X=1030.512mil|Location1.Y=83.661mil|Location2.Y=101.378mil|Absolute=True">Un-Routed Net Constraint: Arc (25.8mm,2.5mm) on Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1000.984mil|Location2.X=1018.701mil|Location1.Y=83.661mil|Location2.Y=101.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1000.984mil|Location2.X=1018.701mil|Location1.Y=83.661mil|Location2.Y=101.378mil|Absolute=True">Un-Routed Net Constraint: Arc (25.8mm,2.5mm) on Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1000.984mil|Location2.X=1018.701mil|Location1.Y=83.661mil|Location2.Y=101.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1000.984mil|Location2.X=1018.701mil|Location1.Y=83.661mil|Location2.Y=101.378mil|Absolute=True">Un-Routed Net Constraint: Arc (25.8mm,2.5mm) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1012.795mil|Location2.X=1030.512mil|Location1.Y=83.661mil|Location2.Y=101.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1012.795mil|Location2.X=1030.512mil|Location1.Y=83.661mil|Location2.Y=101.378mil|Absolute=True">Un-Routed Net Constraint: Arc (25.8mm,2.5mm) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1024.606mil|Location2.X=1042.323mil|Location1.Y=83.661mil|Location2.Y=101.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1024.606mil|Location2.X=1042.323mil|Location1.Y=83.661mil|Location2.Y=101.378mil|Absolute=True">Un-Routed Net Constraint: Arc (26.4mm,2.5mm) on Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1036.417mil|Location2.X=1054.134mil|Location1.Y=83.661mil|Location2.Y=101.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1036.417mil|Location2.X=1054.134mil|Location1.Y=83.661mil|Location2.Y=101.378mil|Absolute=True">Un-Routed Net Constraint: Arc (26.4mm,2.5mm) on Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1036.417mil|Location2.X=1054.134mil|Location1.Y=83.661mil|Location2.Y=101.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1036.417mil|Location2.X=1054.134mil|Location1.Y=83.661mil|Location2.Y=101.378mil|Absolute=True">Un-Routed Net Constraint: Arc (26.4mm,2.5mm) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1024.606mil|Location2.X=1042.323mil|Location1.Y=83.661mil|Location2.Y=101.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1024.606mil|Location2.X=1042.323mil|Location1.Y=83.661mil|Location2.Y=101.378mil|Absolute=True">Un-Routed Net Constraint: Arc (26.4mm,2.5mm) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1009.145mil|Location2.X=1045.973mil|Location1.Y=95.472mil|Location2.Y=104.367mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1009.145mil|Location2.X=1045.973mil|Location1.Y=95.472mil|Location2.Y=104.367mil|Absolute=True">Un-Routed Net Constraint: Region (0 hole(s)) Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1009.145mil|Location2.X=1045.973mil|Location1.Y=95.472mil|Location2.Y=104.368mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1009.145mil|Location2.X=1045.973mil|Location1.Y=95.472mil|Location2.Y=104.368mil|Absolute=True">Un-Routed Net Constraint: Region (0 hole(s)) Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=918.735mil|Location2.X=1066.373mil|Location1.Y=144.963mil|Location2.Y=292.601mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=918.735mil|Location2.X=1066.373mil|Location1.Y=144.963mil|Location2.Y=292.601mil|Absolute=True">Un-Routed Net Constraint: Region (2 hole(s)) Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=990.158mil|Location2.X=994.095mil|Location1.Y=72.835mil|Location2.Y=124.016mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=990.158mil|Location2.X=994.095mil|Location1.Y=72.835mil|Location2.Y=124.016mil|Absolute=True">Un-Routed Net Constraint: Track (25.2mm,1.9mm)(25.2mm,3.1mm) on Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=990.158mil|Location2.X=994.095mil|Location1.Y=72.835mil|Location2.Y=124.016mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=990.158mil|Location2.X=994.095mil|Location1.Y=72.835mil|Location2.Y=124.016mil|Absolute=True">Un-Routed Net Constraint: Track (25.2mm,1.9mm)(25.2mm,3.1mm) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=990.158mil|Location2.X=1064.961mil|Location1.Y=72.835mil|Location2.Y=76.772mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=990.158mil|Location2.X=1064.961mil|Location1.Y=72.835mil|Location2.Y=76.772mil|Absolute=True">Un-Routed Net Constraint: Track (25.2mm,1.9mm)(27mm,1.9mm) on Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=990.158mil|Location2.X=1064.961mil|Location1.Y=72.835mil|Location2.Y=76.772mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=990.158mil|Location2.X=1064.961mil|Location1.Y=72.835mil|Location2.Y=76.772mil|Absolute=True">Un-Routed Net Constraint: Track (25.2mm,1.9mm)(27mm,1.9mm) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=990.158mil|Location2.X=1064.961mil|Location1.Y=120.079mil|Location2.Y=124.016mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=990.158mil|Location2.X=1064.961mil|Location1.Y=120.079mil|Location2.Y=124.016mil|Absolute=True">Un-Routed Net Constraint: Track (25.2mm,3.1mm)(27mm,3.1mm) on Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=990.158mil|Location2.X=1064.961mil|Location1.Y=120.079mil|Location2.Y=124.016mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=990.158mil|Location2.X=1064.961mil|Location1.Y=120.079mil|Location2.Y=124.016mil|Absolute=True">Un-Routed Net Constraint: Track (25.2mm,3.1mm)(27mm,3.1mm) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1000.984mil|Location2.X=1054.134mil|Location1.Y=95.472mil|Location2.Y=101.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1000.984mil|Location2.X=1054.134mil|Location1.Y=95.472mil|Location2.Y=101.378mil|Absolute=True">Un-Routed Net Constraint: Track (25.5mm,2.5mm)(26.7mm,2.5mm) on Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1000.984mil|Location2.X=1054.134mil|Location1.Y=95.472mil|Location2.Y=101.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1000.984mil|Location2.X=1054.134mil|Location1.Y=95.472mil|Location2.Y=101.378mil|Absolute=True">Un-Routed Net Constraint: Track (25.5mm,2.5mm)(26.7mm,2.5mm) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1000.984mil|Location2.X=1030.512mil|Location1.Y=95.472mil|Location2.Y=113.189mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1000.984mil|Location2.X=1030.512mil|Location1.Y=95.472mil|Location2.Y=113.189mil|Absolute=True">Un-Routed Net Constraint: Track (25.5mm,2.8mm)(26.1mm,2.5mm) on Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1000.984mil|Location2.X=1030.512mil|Location1.Y=95.472mil|Location2.Y=113.189mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1000.984mil|Location2.X=1030.512mil|Location1.Y=95.472mil|Location2.Y=113.189mil|Absolute=True">Un-Routed Net Constraint: Track (25.5mm,2.8mm)(26.1mm,2.5mm) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1024.606mil|Location2.X=1054.134mil|Location1.Y=95.472mil|Location2.Y=113.189mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1024.606mil|Location2.X=1054.134mil|Location1.Y=95.472mil|Location2.Y=113.189mil|Absolute=True">Un-Routed Net Constraint: Track (26.1mm,2.5mm)(26.7mm,2.8mm) on Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1024.606mil|Location2.X=1054.134mil|Location1.Y=95.472mil|Location2.Y=113.189mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1024.606mil|Location2.X=1054.134mil|Location1.Y=95.472mil|Location2.Y=113.189mil|Absolute=True">Un-Routed Net Constraint: Track (26.1mm,2.5mm)(26.7mm,2.8mm) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1061.024mil|Location2.X=1064.961mil|Location1.Y=72.835mil|Location2.Y=124.016mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1061.024mil|Location2.X=1064.961mil|Location1.Y=72.835mil|Location2.Y=124.016mil|Absolute=True">Un-Routed Net Constraint: Track (27mm,1.9mm)(27mm,3.1mm) on Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1061.024mil|Location2.X=1064.961mil|Location1.Y=72.835mil|Location2.Y=124.016mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1061.024mil|Location2.X=1064.961mil|Location1.Y=72.835mil|Location2.Y=124.016mil|Absolute=True">Un-Routed Net Constraint: Track (27mm,1.9mm)(27mm,3.1mm) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDBENI2DNMST1UG5XRJL0QBQU0ZLAQXTT0YOTOELPRV13LMMYOP3KC"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=864.256mil|Location2.X=875.506mil|Location1.Y=489.828mil|Location2.Y=501.078mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=864.256mil|Location2.X=875.506mil|Location1.Y=489.828mil|Location2.Y=501.078mil|Absolute=True">Hole To Hole Clearance Constraint: (0.213mm &lt; 0.254mm) Between Via (21.89mm,12.61mm) from Top Layer to Bottom Layer And Via (22.3mm,12.559mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1098.529mil|Location2.X=1106.196mil|Location1.Y=252.072mil|Location2.Y=259.739mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\bemby\Documents\GIT\Github\Kedeon_PCB_playground\SensorPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1098.529mil|Location2.X=1106.196mil|Location1.Y=252.072mil|Location2.Y=259.739mil|Absolute=True">Hole To Hole Clearance Constraint: (Collision &lt; 0.254mm) Between Via (28mm,6.5mm) from Top Layer to Bottom Layer And Via (28mm,6.5mm) from Top Layer to Bottom Layer Pad/Via Touching Holes</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
